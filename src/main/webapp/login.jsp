@@ -13,6 +13,9 @@
 <title>Hello</title>
 </head>
 <body>
+
+<%--Nav bar --%>
+<%@include file="/layout/navbar.jsp" %>
 	<div class="container">
 		<h1 class="display-1">Hello, ${id}</h1>
 		

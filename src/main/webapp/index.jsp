@@ -1,10 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<%-- Java variables --%>	
+<% String title = "Our Super Duper Form"; %>	
+	
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Our Super Duper Form</title>
+<title><%=title%></title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -13,9 +17,9 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Our Super Duper Form</h1>
+		<h1><%=title%></h1>
 
-		<form action="LoginServlet" method="GET">
+		<form action="LoginServlet" method="POST">
 			<div class="mb-3">
 				<label for="userid" class="form-label">User ID:</label> <input
 					class="form-control" type="text" name="id" size="20">

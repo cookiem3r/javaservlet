@@ -37,25 +37,16 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		if (id != "" && password != "" ){
-		if (id.equals(password)){
-		response.setContentType("text/html"); PrintWriter out = response.getWriter();
-		
+		if (password != null && !password.trim().isEmpty()){		
 		DateTimeService dtservice = new DateTimeService(); 
-		dtservice.setDateTime(LocalDateTime.now());
 		
-		out.println ("<html>");
-		out.println ("<head>");
-		out.println ("<title>Response from LoginServlet</title>");
-		out.println ("</head>");
-		out.println ("<body>");
-		out.println ("<h1>Hello World!</h1>");
-		out.println ("<h1>Testing Out Git</h1>");
-		out.println (String.format("<h2>Time invoked: %s</h2>", dtservice.getDateTime()));
-		out.println ("</body>");
-		out.println ("</html>");
+		dtservice.setDateTime(LocalDateTime.now());	
+	
 		
+		 request.setAttribute("id", id);
+		 request.setAttribute("datetime", dtservice.getDateTime());
+	     request.getRequestDispatcher("/login.jsp").forward(request, response);
 		
-		out.close();
 		}
 		else { System.out.println("login failure");
 		}

@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
-<%-- Java variables --%>	
-<% String title = "Our Super Duper Form"; %>	
-	
+
+<%-- Java variables --%>
+<%
+String title = "Our Super Duper Form";
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,8 +18,8 @@
 	crossorigin="anonymous">
 </head>
 <body class="d-flex flex-column min-vh-100">
-<%--Nav bar --%>
-<%@include file="/layout/navbar.jsp" %>
+	<%--Nav bar --%>
+	<%@include file="/layout/navbar.jsp"%>
 	<div class="container">
 		<h1><%=title%></h1>
 
@@ -29,15 +31,28 @@
 
 			<div class="mb-3">
 				<label for="exampleInputPassword1" class="form-label">Password:</label>
-				<input class="form-control" type="password" name="password" size="20">
+				<input class="form-control" type="password" name="password"
+					size="20">
+			</div>
+
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value=""
+					id="flexCheckDefault"> <label class="form-check-label"
+					for="flexCheckDefault"> Default Checkbox </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value=""
+					id="flexCheckChecked" checked> <label
+					class="form-check-label" for="flexCheckChecked"> Checked
+					Checkbox </label>
 			</div>
 
 			<input class="btn btn-primary" type="submit" value="Submit">
 		</form>
 	</div>
-	
-	
-	<footer class="mt-auto"><%@include file="/layout/footer.jsp" %></footer>
+
+
+	<footer class="mt-auto"><%@include file="/layout/footer.jsp"%></footer>
 
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

@@ -20,6 +20,7 @@ String title = "Our Super Duper Form";
 <body class="d-flex flex-column min-vh-100">
 	<%--Nav bar --%>
 	<%@include file="/layout/navbar.jsp"%>
+	
 	<div class="container">
 		<h1><%=title%></h1>
 
